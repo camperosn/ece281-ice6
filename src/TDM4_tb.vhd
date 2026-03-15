@@ -61,7 +61,7 @@ architecture test_bench of TDM4_tb is
 		   i_D1 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
 		   i_D0 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
 		   o_data		: out STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
-		   o_sel		: out STD_LOGIC_VECTOR (3 downto 0)	-- selected data line (one-cold)
+		   o_sel_n 		: out STD_LOGIC_VECTOR (3 downto 0)	-- selected data line (one-cold)
 	);
 	end component TDM4;
 
@@ -87,7 +87,7 @@ begin
        i_D1    => w_D1,
        i_D0    => w_D0,
        o_data  => f_data,
-       o_sel   => f_sel_n
+       o_sel_n   => f_sel_n
 	);
 	-----------------------------------------------------	
 	
